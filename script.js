@@ -51,6 +51,12 @@ class UI {
 
     }
 
+    static showAlert(message, className) {
+        const div = document.createElement('div');
+        div.className = `alert alert-${className}`;
+        div.appendChild(document.createTextNode(message));
+    }
+
     static clearField() {
         document.getElementById('title').value = '';
         document.getElementById('author').value = '';
